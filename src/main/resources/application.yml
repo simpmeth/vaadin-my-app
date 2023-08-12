@@ -1,0 +1,20 @@
+server:
+  port: ${PORT:8080}
+spring:
+  mustache:
+    check-template-location: 'false'
+  jpa:
+    defer-datasource-initialization: 'true'
+logging:
+  level:
+    root: ${LOG_LEVEL:TRACE}
+    org:
+      atmosphere: warn
+vaadin:
+  launch-browser: 'true'
+  whitelisted-packages: com.vaadin,org.vaadin,dev.hilla,com.example.application,software/xdev,com/vaadin/flow
+graphql:
+  serviceUrl: ${GRAPHQL_SERVICE_URL:http://www.dev.pbd.ai/api/cms/graphql}
+  tokenRefreshTime: ${GRAPHQL_TOKEN_REFRESH_TIME:350000}
+  authUrl: ${GRAPHQL_AUTH_URL:http://www.dev.pbd.ai/api/cms/authentication}
+  refreshUrl: ${GRAPHQL_REFRESH_URL:http://www.dev.pbd.ai/api/cms/auth/refreshToken}
